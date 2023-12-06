@@ -5,13 +5,14 @@
   color: #333;
 }
 .navbar {
-  padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 600px;
+  width: 70vw;
+  max-width: 70vw;
+  padding:  10px 100px 10px 100px;
   margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
-  z-index: 99;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #bebebe;
   background-color: #ffffff;
 }
 .navbar h1 {
@@ -28,40 +29,91 @@
 .navbar a:hover {
   color: #f1356d;
 }
-.content {
+/* .content {
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
+} */
+
+
+
+.select-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 30px; 
+  width: 100vw;
+  background-color: #333; 
+  color: #fff; 
 }
 
-
-
-.left-menu {
-  position: fixed;
-  left: 0;
-  top: 80px;
-  height: 100%; 
-  width: 200px; /* Largeur du menu */
-  background-color: #333; /* Couleur de fond du menu */
-  color: #fff; /* Couleur du texte du menu */
-  padding-top: 20px; /* Espacement en haut du menu */
-}
-
-.left-menu ul {
-  list-style-type: none; /* Supprimer les puces de la liste */
-  padding: 0;
-  padding-left: 10px;
-}
-
-.left-menu li {
-  margin-bottom: 10px; /* Espacement entre les éléments du menu */
-}
-
-.left-menu a {
+.select-menu a {
   text-decoration: none;
-  color: #fff; /* Couleur du texte des liens du menu */
+  color: #fff; 
   font-size: 16px;
-  display: block; /* Rendre les liens du menu en bloc pour prendre toute la largeur du conteneur */
-  padding: 10px; /* Espacement autour des liens */
-  transition: background-color 0.3s; /* Transition pour un effet de survol */
+  display: block; 
+  padding: 10px; 
+  transition: background-color 0.3s; 
+}
+
+.characterList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.characterCard {
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+
+/* Styles généraux pour le conteneur du select */
+.select-container {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+}
+
+/* Styles pour le select lui-même */
+.select-style {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  width: 200px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Flèche stylisée pour le select */
+.select-container::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #555;
+  pointer-events: none; /* Empêche l'interaction avec la flèche */
+}
+
+/* Style au survol */
+.select-style:hover {
+  border-color: #aaa;
+}
+
+/* Style au focus */
+.select-style:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(200, 200, 200, 0.5);
 }

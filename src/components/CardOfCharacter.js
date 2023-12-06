@@ -1,6 +1,6 @@
 const CardOfCharacter = ({ isLoading, myData, army }) => {
   return (
-    <div>
+    <div className="characterList">
       {isLoading && <div>Loading...</div>}
       {myData &&
         myData.map((elem) => {
@@ -9,7 +9,7 @@ const CardOfCharacter = ({ isLoading, myData, army }) => {
 
           if (elem.faction === army) {
             return (
-              <div className="name" key={elem.model_id}>
+              <div className="characterCard" key={elem.model_id}>
                 <img
                   className="imgCharacter"
                   src={(() => {
@@ -20,8 +20,15 @@ const CardOfCharacter = ({ isLoading, myData, army }) => {
                     }
                   })()}
                   alt=""
+                  width="150px"
                 />
-                <p>{elem.name}</p>
+                <h4>{elem.name}</h4>
+                <div className="detailCharacterCard">
+                  <p>{elem.unit_type}</p>
+                  <p>Nombre de points: {elem.base_points}pts</p>
+                  <p>Nbr d'options disponible: {elem.options.length} </p>
+                  
+                </div>
               </div>
             );
           }

@@ -1,7 +1,17 @@
 const Navigation = () => {
   return (
     <div className="navbar">
-        <h1>MESBG</h1>
+      
+      <img
+        src={(() => {
+          try {
+            return require("../images/title-logo.png");
+          } catch (e) {
+            return require("../images/default.png");
+          }
+        })()}
+        alt=""
+      />
       <div className="links">
         <a href="/">HOME</a>
         <a href="/about">ABOUT</a>

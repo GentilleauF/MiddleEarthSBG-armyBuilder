@@ -6,7 +6,8 @@ const GoodArmy = ({myData, isLoading}) => {
 
     return ( 
         <div>
-        <select onChange={(e) => setArmy(e.target.value)}>
+          <div className="select-container">
+          <select className="select-style" onChange={(e) => setArmy(e.target.value)}>
           <option value="Rohan">Rohan</option>
           <option value="Arnor">Arnor</option>
           <option value="Breaking of the Fellowship"> Breaking of the Fellowship</option>
@@ -28,6 +29,8 @@ const GoodArmy = ({myData, isLoading}) => {
           <option value="The Shire">The Shire</option>
           <option value="Wildmen of Druadan">Wildmens od Druandan </option>
         </select>
+
+          </div>
 
         {myData && <CardOfCharacter myData={myData} army={army} isLoading={isLoading}/>}
         </div>

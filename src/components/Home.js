@@ -10,17 +10,10 @@ const HOME = () => {
 
   return (
     <div className="home-content">
-      <div className="left-menu">
-        <ul>
-          <li><a href="#" onClick={() => setArmy("Good Army")}>Armée du bien</a>
-          <ul>
-            <li><a href="" value="Rohan" ></a></li>
-          </ul>
-          </li>
-          <li> <a href="#" onClick={() => {setArmy("Evil Army")}}>Armée du mal</a></li>
-        </ul>
-
-      </div>
+      <div className="select-menu">
+        <a href="#" onClick={() => setArmy("Good Army")}>Armée du bien</a>
+        <a href="#" onClick={() => {setArmy("Evil Army")}}>Armée du mal</a>
+       </div>
       <div className="list">
 
 
