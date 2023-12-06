@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0;
   font-family: "Quicksand";
   color: #333;
 }
@@ -10,6 +11,8 @@
   max-width: 600px;
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
+  z-index: 99;
+  background-color: #ffffff;
 }
 .navbar h1 {
   color: #f1356d;
@@ -29,4 +32,36 @@
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
+}
+
+
+
+.left-menu {
+  position: fixed;
+  left: 0;
+  top: 80px;
+  height: 100%; 
+  width: 200px; /* Largeur du menu */
+  background-color: #333; /* Couleur de fond du menu */
+  color: #fff; /* Couleur du texte du menu */
+  padding-top: 20px; /* Espacement en haut du menu */
+}
+
+.left-menu ul {
+  list-style-type: none; /* Supprimer les puces de la liste */
+  padding: 0;
+  padding-left: 10px;
+}
+
+.left-menu li {
+  margin-bottom: 10px; /* Espacement entre les éléments du menu */
+}
+
+.left-menu a {
+  text-decoration: none;
+  color: #fff; /* Couleur du texte des liens du menu */
+  font-size: 16px;
+  display: block; /* Rendre les liens du menu en bloc pour prendre toute la largeur du conteneur */
+  padding: 10px; /* Espacement autour des liens */
+  transition: background-color 0.3s; /* Transition pour un effet de survol */
 }
