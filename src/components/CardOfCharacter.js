@@ -1,26 +1,23 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const CardOfCharacter = ({ isLoading, myData, army }) => {
-  let tablo = [];
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+
+  function handleOpenOverlay() {
+    setIsOverlayOpen(true);
+  }
+
+  function handleCloseOverlay() {
+    setIsOverlayOpen(false);
+  }
+
   return (
     <div className="characterList">
       {isLoading && <div>Loading...</div>}
+
       {myData &&
         myData.map((elem) => {
-          const imagePath =
-            require(`../images/${elem.profile_origin}/pictures/${elem.name}.png`).default;
-            
-//////////////////
-          // const str = elem.id;
-          // str.replace(/ /g,'');
-
-          // tablo.push(str)
-          // tablo.sort()
-          // console.log(tablo);
-
-///////////////
-
-
           if (elem.faction === army) {
             return (
             <Link to={`/characterPage/${elem.id}`}>
@@ -49,6 +46,18 @@ const CardOfCharacter = ({ isLoading, myData, army }) => {
             );
           }
         })}
+
+<div>
+        <button onClick={handleOpenOverlay}>Ouvrir le modal</button>
+        {isOverlayOpen && (
+          <div className="modal">
+            <div className="modal-content">
+              <h2>Contenu du modal</h2>
+              <button onClick={handleCloseOverlay}>Fermer</button>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

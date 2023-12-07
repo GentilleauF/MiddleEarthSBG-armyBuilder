@@ -28,7 +28,6 @@ const BadArmy = ({ myData, isLoading }) => {
         <option value="The Serpent Horde">The Serpent Horde </option>
         <option value="Variags of Khand">Variags of Khand</option>
       </select>
-
       </div>
 
       {myData && <CardOfCharacter myData={myData} army={army} isLoading={isLoading}/>}
