@@ -1,17 +1,29 @@
+import About from "./components/About";
+import CharacterPage from "./components/CharacterPage";
 import HOME from "./components/Home";
 import Navigation from "./components/Navigation";
 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Navigation/>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <Navigation />
+        </header>
         <div className="content">
-          <HOME/>
-        </div>
+          <Routes>
+            <Route path='/' element={<HOME/>}/>
+            <Route path="/about" element={<About/>} />
+            <Route path="/characterPage/:id" element={<CharacterPage/>} />
 
-      </header>
-    </div>
+
+
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 

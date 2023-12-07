@@ -12,7 +12,7 @@ const HOME = () => {
     <div className="home-content">
       <div className="select-menu">
         <a href="#" onClick={() => setArmy("Good Army")}>Armée du bien</a>
-        <a href="#" onClick={() => {setArmy("Evil Army")}}>Armée du mal</a>
+        <a href="#" onClick={() => setArmy("Evil Army")}>Armée du mal</a>
        </div>
       <div className="list">
 

@@ -3,11 +3,14 @@ import CardOfCharacter from "./CardOfCharacter";
 
 const BadArmy = ({ myData, isLoading }) => {
   const [army, setArmy] = useState("");
+  
 
   return (
     <div>
       <div className="select-container" >
       <select className="select-style"  onChange={(e) => setArmy(e.target.value)}>
+        <option value=""></option>
+        <option value="Angmar">Angmar</option>
         <option value="Army of Dunland">Army of Dunland</option>
         <option value="Assault Upon Helm's Deep">Assault Upon Helm's Deep{" "}</option>
         <option value="Barad-dur">Barad-dur</option>

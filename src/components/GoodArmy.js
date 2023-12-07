@@ -8,7 +8,7 @@ const GoodArmy = ({myData, isLoading}) => {
         <div>
           <div className="select-container">
           <select className="select-style" onChange={(e) => setArmy(e.target.value)}>
-          <option value="Rohan">Rohan</option>
+          <option value=""></option>
           <option value="Arnor">Arnor</option>
           <option value="Breaking of the Fellowship"> Breaking of the Fellowship</option>
           <option value="Defenders of Helm's Deep"> Defenders of Helm's Deep</option>

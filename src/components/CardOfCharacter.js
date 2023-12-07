@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";
+
 const CardOfCharacter = ({ isLoading, myData, army }) => {
+  let tablo = [];
   return (
     <div className="characterList">
       {isLoading && <div>Loading...</div>}
@@ -6,10 +9,22 @@ const CardOfCharacter = ({ isLoading, myData, army }) => {
         myData.map((elem) => {
           const imagePath =
             require(`../images/${elem.profile_origin}/pictures/${elem.name}.png`).default;
+            
+//////////////////
+          // const str = elem.id;
+          // str.replace(/ /g,'');
+
+          // tablo.push(str)
+          // tablo.sort()
+          // console.log(tablo);
+
+///////////////
+
 
           if (elem.faction === army) {
             return (
-              <div className="characterCard" key={elem.model_id}>
+            <Link to={`/characterPage/${elem.id}`}>
+              <div className="characterCard" key={elem.id}>
                 <img
                   className="imgCharacter"
                   src={(() => {
@@ -30,6 +45,7 @@ const CardOfCharacter = ({ isLoading, myData, army }) => {
                   
                 </div>
               </div>
+            </Link>
             );
           }
         })}
