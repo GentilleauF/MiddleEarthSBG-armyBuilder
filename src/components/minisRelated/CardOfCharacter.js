@@ -26,9 +26,9 @@ const CardOfCharacter = ({ isLoading, myData, army }) => {
                   className="imgCharacter"
                   src={(() => {
                     try {
-                      return require("../images/" + elem.profile_origin +"/pictures/" + elem.name +".png");
+                      return require("../../images/" + elem.profile_origin +"/pictures/" + elem.name +".png");
                     } catch (e) {
-                      return require("../images/default.png");
+                      return require("../../images/default.png");
                     }
                   })()}
                   alt=""
