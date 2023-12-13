@@ -15,6 +15,7 @@ const Navigation = () => {
       <div className="links">
         <a href="/">HOME</a>
         <a href="/about">ABOUT</a>
+        <a href="/myMinis">MES FIGURINES</a>
       </div>
     </div>
   );

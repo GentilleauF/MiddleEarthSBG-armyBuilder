@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useFetch from "./useFetch";
-import GoodArmy from "./GoodArmy";
-import BadArmy from "./BadArmy";
+import GoodArmy from "./minisRelated/GoodArmy";
+import BadArmy from "./minisRelated/BadArmy";
 
 const HOME = () => {
   const { myData, isLoading } = useFetch("http://localhost:8000/data");
