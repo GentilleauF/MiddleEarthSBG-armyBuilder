@@ -3,8 +3,8 @@ import CardOfCharacter from "./CardOfCharacter";
 
 const BadArmy = ({ myData, isLoading }) => {
   const [army, setArmy] = useState("");
-  
 
+  
   return (
     <div>
       <div className="select-container" >

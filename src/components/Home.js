@@ -19,7 +19,7 @@ const HOME = () => {
 
         {console.log(myData)}
 
-        {army === "Good Army" && <GoodArmy myData={myData} isLoading={isLoading} />}
+        {army === "Good Army" && <GoodArmy myData={myData} army={army} isLoading={isLoading} />}
         {army === "Evil Army" && <BadArmy myData={myData} army={army} setArmy={setArmy} isLoading={isLoading} />}
       </div>
     </div>
