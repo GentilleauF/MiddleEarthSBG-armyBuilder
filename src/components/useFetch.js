@@ -27,8 +27,6 @@ const useFetch = (url) => {
             
     }, [url] )
 
-
-
     return {myData, isLoading, error};
 }
  
