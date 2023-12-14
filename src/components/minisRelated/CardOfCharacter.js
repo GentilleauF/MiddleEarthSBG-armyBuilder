@@ -20,34 +20,37 @@ const CardOfCharacter = ({ isLoading, myData, army }) => {
         myData.map((elem) => {
           if (elem.faction === army) {
             return (
-            <Link to={`/characterPage/${elem.id}`}>
-              <div className="characterCard" key={elem.id}>
-                <img
-                  className="imgCharacter"
-                  src={(() => {
-                    try {
-                      return require("../../images/" + elem.profile_origin +"/pictures/" + elem.name +".png");
-                    } catch (e) {
-                      return require("../../images/default.png");
-                    }
-                  })()}
-                  alt=""
-                  width="150px"
-                />
-                <h4>{elem.name}</h4>
-                <div className="detailCharacterCard">
-                  <p>{elem.unit_type}</p>
-                  <p>Nombre de points: {elem.base_points}pts</p>
-                  <p>Nbr d'options disponible: {elem.options.length} </p>
-                  
+              <Link to={`/characterPage/${elem.id}`}>
+                <div className="characterCard" key={elem.id}>
+                  <img
+                    className="imgCharacter"
+                    src={(() => {
+                      try {
+                        return require("../../images/" +
+                          elem.profile_origin +
+                          "/pictures/" +
+                          elem.name +
+                          ".png");
+                      } catch (e) {
+                        return require("../../images/default.png");
+                      }
+                    })()}
+                    alt=""
+                    width="150px"
+                  />
+                  <h4>{elem.name}</h4>
+                  <div className="detailCharacterCard">
+                    <p>{elem.unit_type}</p>
+                    <p>Nombre de points: {elem.base_points}pts</p>
+                    <p>Nbr d'options disponible: {elem.options.length} </p>
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
             );
           }
         })}
 
-<div>
+      <div>
         <button onClick={handleOpenOverlay}>Ouvrir le modal</button>
         {isOverlayOpen && (
           <div className="modal">

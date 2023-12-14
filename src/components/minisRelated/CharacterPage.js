@@ -15,7 +15,6 @@ const CharacterPage = () => {
 
   //test
 
-
   //
 
 
